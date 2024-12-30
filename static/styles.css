@@ -1,0 +1,414 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://as2.ftcdn.net/v2/jpg/05/94/25/31/1000_F_594253198_uAvbZS8SZ1iDXh3p11UlYpiyU7reKH5h.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Makes sure the image covers the entire screen */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #333;
+}
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Slight white background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #f4f4f4;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #f4f4f4;
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.messages .success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.messages .danger {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.messages .info {
+    background: #d1ecf1;
+    color: #0c5460;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.messages .warning {
+    background: #fff3cd;
+    color: #856404;
+    padding: 10px;
+    border-radius: 4px;
+}
+.transparent-background {
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparency */
+    padding: 20px;
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#inputContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.guess-input {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.guess-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.history-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.history-table th, .history-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.history-table th {
+    background-color: #f4f4f4;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.history-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+/* Container for login form */
+.login-container {
+    background: rgba(3, 151, 144, 0.5); /* Transparent background with black overlay */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Heading Style */
+.login-heading {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #000202; /* Futuristic neon color */
+    margin-bottom: 30px;
+}
+
+/* Input Styles */
+.login-input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #7a7676;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background for inputs */
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-input:focus {
+    background-color: rgba(0, 255, 255, 0.2);
+    border-color: #00e5ff; /* Highlight border with neon color */
+}
+
+/* Button Styles */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #0a7c5a;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #007c92; /* Darker shade of blue on hover */
+}
+
+/* Label styles */
+.login-label {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+    display: block;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+
+    .login-heading {
+        font-size: 28px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+    }
+}
+
+
+/* Container for register form */
+.register-container {
+    background: rgba(0, 0, 0, 0.5); /* Transparent background with black overlay */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.register-container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Heading Style */
+.register-heading {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00e5ff; /* Futuristic neon color */
+    margin-bottom: 30px;
+}
+
+/* Input Styles */
+.register-input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background for inputs */
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.register-input:focus {
+    background-color: rgba(0, 255, 255, 0.2);
+    border-color: #00e5ff; /* Highlight border with neon color */
+}
+
+/* Button Styles */
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #00e5ff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #007c92; /* Darker shade of blue on hover */
+}
+
+/* Label styles */
+.register-label {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+    display: block;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 400px) {
+    .register-container {
+        width: 90%;
+    }
+
+    .register-heading {
+        font-size: 28px;
+    }
+
+    .register-btn {
+        font-size: 16px;
+    }
+}

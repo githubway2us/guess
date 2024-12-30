@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome, {{ session['user'] }}!</h1>
+<h2>Your Score: {{ score }}</h2>
+<div class="container">
+<form method="post" action="{{ url_for('game') }}" id="guessForm" class="table table-bordered mt-3">
+    <label for="guess">Enter your guess (6 unique digits):</label><br>
+    <div id="inputContainer">
+        <input type="number" id="guess1" name="guess1" required min="0" max="9" class="guess-input" step="1">
+        <input type="number" id="guess2" name="guess2" required min="0" max="9" class="guess-input" step="1">
+        <input type="number" id="guess3" name="guess3" required min="0" max="9" class="guess-input" step="1">
+        <input type="number" id="guess4" name="guess4" required min="0" max="9" class="guess-input" step="1">
+        <input type="number" id="guess5" name="guess5" required min="0" max="9" class="guess-input" step="1">
+        <input type="number" id="guess6" name="guess6" required min="0" max="9" class="guess-input" step="1">
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+<h3>Guess History</h3>
+<table class="container">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Guess</th>
+            <th>Correct Numbers</th>
+            <th>Correct Positions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for guess in guess_history %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ guess['value'] }}</td>
+            <td>{{ guess['correct_numbers'] }}</td>
+            <td>{{ guess['correct_positions'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>Keep guessing until you get all digits and positions correct!</p>
+</div>
+   <!-- Game Instructions Section -->
+   <div class="game-instructions">
+    <h2>How to Play the Game</h2>
+    <p>To play the game, follow these steps:</p>
+    <ol>
+        <li>Log in with your account or register if you don't have one.</li>
+        <li>After logging in, navigate to the "Game" page.</li>
+        <li>In the game, you'll need to guess a 6-digit number (0-9), with each digit being unique.</li>
+        <li>Enter your guess in the input fields provided and click "Submit."</li>
+        <li>The system will show you how many digits were correct and how many were in the correct position.</li>
+        <li>Continue guessing until you get all digits and positions correct.</li>
+        <li>Check your guess history to see your progress.</li>
+    </ol>
+    <p>Good luck!</p>
+</div>
+</div>
+<script>
+    // JavaScript to handle input focus and restrict number entry
+    document.querySelectorAll('.guess-input').forEach((input, index) => {
+        input.addEventListener('input', function(e) {
+            if (e.target.value.length >= 1 && index < 5) {
+                document.querySelectorAll('.guess-input')[index + 1].focus();
+            }
+        });
+    });
+
+    // Optional: Add visual feedback when inputs are focused
+    document.querySelectorAll('.guess-input').forEach(input => {
+        input.addEventListener('focus', () => {
+            input.style.backgroundColor = '#e0f7fa'; // Light blue focus
+        });
+        input.addEventListener('blur', () => {
+            input.style.backgroundColor = ''; // Reset to default
+        });
+    });
+</script>
+{% endblock %}
