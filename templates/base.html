@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
     <style>
         /* Basic styling for the navigation */
         nav {
@@ -78,8 +78,8 @@
                 <li><a href="{{ url_for('leaderboard') }}" class="{{ 'active' if request.endpoint == 'leaderboard' else '' }}">Leaderboard</a></li>
                 <li><a href="{{ url_for('logout') }}" class="{{ 'active' if request.endpoint == 'logout' else '' }}">Logout</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}" class="{{ 'active' if request.endpoint == 'login' else '' }}">Login</a></li>
-                <li><a href="{{ url_for('register') }}" class="{{ 'active' if request.endpoint == 'register' else '' }}">Register</a></li>
+                <li><a href="{{ url_for('login2') }}" class="{{ 'active' if request.endpoint == 'login2' else '' }}">Login</a></li>
+                <li><a href="{{ url_for('register2') }}" class="{{ 'active' if request.endpoint == 'register2' else '' }}">Register</a></li>
             {% endif %}
         </ul>
     </nav>

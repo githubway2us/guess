@@ -58,20 +58,20 @@ def get_leaderboard():
 def home():
     return render_template("home.html")
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
+@app.route("/register2", methods=["GET", "POST"])
+def register2():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
         if register_user(username, password):
             flash("Registration successful! Please log in.", "success")
-            return redirect(url_for("login"))
+            return redirect(url_for("login2"))
         else:
             flash("Username already exists!", "danger")
-    return render_template("register.html")
+    return render_template("register2.html")
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/login2", methods=["GET", "POST"])
+def login2():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
@@ -83,12 +83,12 @@ def login():
             return redirect(url_for("game"))
         else:
             flash("Invalid username or password!", "danger")
-    return render_template("login.html")
+    return render_template("login2.html")
 
 @app.route("/game", methods=["GET", "POST"])
 def game():
     if "user" not in session:
-        return redirect(url_for("login"))
+        return redirect(url_for("login2"))
 
     # Initialize guess history if not present
     if "guess_history" not in session:
